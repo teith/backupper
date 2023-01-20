@@ -1,0 +1,21 @@
+version: "2.2"
+
+services:
+  app:
+    build: .
+    command: sh runapp.sh
+    expose:
+      - 8000
+  db:
+    image: postgres:15
+    volumes:
+      - /var/www/backupper/db:/var/lib/postgresql/data
+    env_file:
+      - db.env
+  nginx:
+    build: ./nginx
+    ports:
+      - "5291:8000"
+    depends_on:
+      - app
+

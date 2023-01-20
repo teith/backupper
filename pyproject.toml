@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "backupper"
+version = "0.0.1"
+description = "A tool for auto backuping data from your server to most popular clouds."
+authors = ["teith"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.89.1"
+uvicorn = "^0.20.0"
+alembic = "^1.9.2"
+psycopg2-binary = "^2.9.5"
+httpx = "^0.23.3"
+pyyaml = "^6.0"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
