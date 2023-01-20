@@ -11,4 +11,3 @@ def check_existing(stdin: Path, stdout: Path):
         return True
     else:
         raise Exception
-
