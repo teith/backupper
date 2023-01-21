@@ -6,6 +6,8 @@ services:
     command: sh runapp.sh
     expose:
       - 8000
+    volumes:
+      - /Users/art42/:/user_storage
   db:
     image: postgres:15
     volumes:

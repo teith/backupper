@@ -5,5 +5,5 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /code
 COPY pyproject.toml /code/
 COPY poetry.lock /code/
-RUN pip install poetry && poetry config virtualenvs.create false && poetry install
+RUN apt-get update && apt-get install p7zip-full -y && pip install poetry && poetry config virtualenvs.create false && poetry install
 COPY src/ /code/
